@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <body>
+    <h1>Set values</h1>
+
+    <form method="post" action="/getriskvalues">
+      <div>
+        <label for="r"> No of Resources </label>
+        <input type="text" name="r" />
+      </div>
+
+      <div>
+        <label> Scalable Service Type </label>
+        <label>
+          <input type="radio" name="S" value="no" /> EC2
+        </label>
+        <label>
+          <input type="radio" name="S" value="yes" /> Lambda
+        </label>
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+
+   <div>
+   <form action={{ url_for("getauditlogs")}} method="post">
+    <input type="submit" value="Audit Logs"/>
+    </form>
+  </div>
+  </body>
+</html>
+

@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+    <script>
+    
+      var table = JSON.parse({{data|tojson|safe}}).data;
+      
+      var newRow = ["R", "S", "Warmup Time", "H", "D", "P", "T", "var95", "var99", "profit95", "profit99", "Compute Time"];
+
+      table.unshift(newRow)
+
+      google.charts.load('current', {'packages':['corechart', 'table']});
+      google.charts.setOnLoadCallback((function(){
+  
+        var Table = new google.visualization.Table(document.getElementById('table1'));
+        var data = google.visualization.arrayToDataTable(table);
+        Table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+        
+      }));
+     
+    </script>
+  </head>
+  <body>
+    <div id="table1"></div>
+    <a href="/clear"> Clear Audit Logs</a>
+    <a href="/close"> Close Scalable Services</a>
+    </body>
+</html>
+

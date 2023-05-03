@@ -1,0 +1,27 @@
+<!doctype html>
+<form method="post" action="{{ url_for('simulation') }}">
+
+  <div>
+    <label for="h"> History </label>
+    <input type="text" name="h"/>
+  </div>
+
+  <div>
+    <label for="d"> Shots </label>
+    <input type="text" name="d"/>
+  </div>
+
+  <div>
+    <label for="p"> Profit </label>
+    <input type="text" name="p"/>
+  </div>
+
+  <div>
+    <label for="t"> Buy/Sell </label>
+    <input type="radio" name="t" value="buy"> Buy </input>
+    <input type="radio" name="t" value="sell"> Sell </input>
+  </div>
+
+  <input type="submit"/>
+</form>
+
