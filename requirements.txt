@@ -1,0 +1,5 @@
+pandas 
+yfinance
+pandas_datareader 
+flask
+boto3
